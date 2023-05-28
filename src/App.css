@@ -33,10 +33,46 @@
   }
 }
 
-.card {
+/* .card {
   padding: 2em;
-}
+} */
 
 .read-the-docs {
   color: #888;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: lightblue;
+  width: 300px;
+  margin: 20px;
+  border: 1px solid lightblue;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.cardImg {
+  height: 200px;
+  overflow: hidden;
+}
+
+.cardImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardTitle {
+  font-weight: bold;
+  font-size: 20px;
+}
+.cardContent {
+  margin: 5px;
+}
+.cardBtn {
+  margin: 10px;
 }
