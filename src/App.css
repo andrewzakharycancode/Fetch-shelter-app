@@ -57,7 +57,7 @@ button {
 }
 
 button {
-  color: var(--white-color);
+  color: #555; /* Updated button text color */
   background-color: var(--primary-color);
   border: none;
   cursor: pointer;
@@ -169,7 +169,7 @@ button:hover {
 }
 
 .pagination button.active {
-  background-color: #b20710;
+  background-color: #000;
   color: var(--white-color);
 }
 
@@ -178,7 +178,7 @@ button:hover {
   left: 20px;
   top: 50%;
   transform: translateY(-50%);
-  background-color: var(--secondary-color);
+  background-color: #000;
   width: 250px;
   padding: 20px;
   border-radius: 10px;
@@ -207,49 +207,4 @@ button:hover {
 
 .logoutButton:hover {
   background-color: #000;
-}
-
-.homepage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  text-align: center;
-  height: 100vh;
-}
-
-.homepage h2 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
-}
-
-.homepage p {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.homepage input {
-  width: 100%;
-  max-width: 300px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
-.homepage button {
-  color: var(--white-color);
-  background-color: var(--primary-color);
-  border: none;
-  cursor: pointer;
-  margin-top: 10px;
-  border-radius: var(--button-border-radius);
-  padding: var(--button-padding);
-  font-size: 1rem;
-}
-
-.homepage button:hover {
-  background-color: #b20710;
 }
