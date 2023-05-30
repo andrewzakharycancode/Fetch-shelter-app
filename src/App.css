@@ -1,8 +1,33 @@
+:root {
+  --background-color: #141414;
+  --font-color: #e1e1e1;
+  --primary-color: #e50914;
+  --secondary-color: #303030;
+  --white-color: #fff;
+  --button-border-radius: 25px;
+  --button-padding: 10px 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .logo {
@@ -11,48 +36,59 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em var(--primary-color));
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+button {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  background: var(--secondary-color);
+  color: var(--font-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+button {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
 }
 
-/* .card {
-  padding: 2em;
-} */
-
-.read-the-docs {
-  color: #888;
+button:hover {
+  background-color: #b20710;
 }
 
 .cardsContainer {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
 }
 
 .card {
-  background-color: lightblue;
+  background-color: var(--secondary-color);
   width: 300px;
   margin: 20px;
-  border: 1px solid lightblue;
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .cardImg {
@@ -67,12 +103,153 @@
 }
 
 .cardTitle {
+  color: var(--primary-color);
   font-weight: bold;
-  font-size: 20px;
+  font-size: 24px;
+  margin-top: 10px;
 }
+
 .cardContent {
+  color: var(--font-color);
   margin: 5px;
 }
+
 .cardBtn {
-  margin: 10px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+}
+
+.cardBtn:hover {
+  background-color: #b20710;
+}
+
+.matchCard {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.matchCard img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.matchCard h2 {
+  margin-bottom: 20px;
+}
+
+.matchCard p {
+  font-size: 18px;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+.pagination button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: 1px solid var(--primary-color);
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination button:hover {
+  background-color: #b20710;
+}
+
+.pagination button.active {
+  background-color: #b20710;
+  color: var(--white-color);
+}
+
+.sidebar {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--secondary-color);
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.sidebar select,
+.sidebar input[type="number"] {
+  margin-bottom: 10px;
+}
+
+.logoutButton {
+  background-color: #333;
+  color: var(--white-color);
+  border: none;
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  cursor: pointer;
+}
+
+.logoutButton:hover {
+  background-color: #000;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  height: 100vh;
+}
+
+.homepage h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.homepage p {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.homepage input {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.homepage button {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: var(--button-border-radius);
+  padding: var(--button-padding);
+  font-size: 1rem;
+}
+
+.homepage button:hover {
+  background-color: #b20710;
 }
