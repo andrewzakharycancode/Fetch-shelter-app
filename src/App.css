@@ -18,11 +18,15 @@
 body {
   background-color: var(--background-color);
   color: var(--font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 #root {
   max-width: 1280px;
-  margin: 0 auto;
+  width: 100%;
   padding: 2rem;
   text-align: center;
   background-color: var(--secondary-color);
@@ -46,18 +50,21 @@ input[type="email"],
 input[type="number"],
 select,
 button {
+  display: block;
   width: 100%;
   max-width: 300px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
   background: var(--secondary-color);
   color: var(--font-color);
 }
 
 button {
-  color: #555; /* Updated button text color */
+  color: #555;
   background-color: var(--primary-color);
   border: none;
   cursor: pointer;
